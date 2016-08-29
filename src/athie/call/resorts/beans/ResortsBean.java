@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 @XmlRootElement(name="DataSet")
 @XmlAccessorType(XmlAccessType.FIELD)

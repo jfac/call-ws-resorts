@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  * Bean para obtener el estado por pais
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public class ResortsState implements I_ResortState{
     private String country;

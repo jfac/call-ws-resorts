@@ -11,12 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import xml.utils.BeanTableModel;
 import xml.utils.ResortsXml;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public class testPanel extends javax.swing.JPanel {
     String ResortName, ResortCity, ResortCountry,TravelDate1,TravelDate2;
@@ -167,37 +166,32 @@ public class testPanel extends javax.swing.JPanel {
         TravelDate2 = jtxtFechaFinal.getText().isEmpty()?"":jtxtFechaFinal.getText();
         System.out.println(ResortName + "//" +ResortCity + "//" +ResortCountry + "//" + TravelDate1 + "//" + TravelDate2);
         getLstUnitsAvailable();
-        if(lstUnitsAvailable.size() > 0){
-            BeanTableModel<UnitsAvailable> btM = 
-                    new BeanTableModel<UnitsAvailable>(UnitsAvailable.class,java.awt.Component.class);
-            //btM.addRow(lstUnitsAvailable.toArray());
+        if (lstUnitsAvailable.size() > 0) {
             Object[] columnNames = {
                 //ResortsXml.InvType,
                 ResortsXml.ResortId,
-            ResortsXml.ResortName,
-            ResortsXml.ResortHighLights,
-            ResortsXml.ResortAddress1,
-            ResortsXml.ResortAddress2,
-            ResortsXml.ResortAddress3,
-            ResortsXml.ResortCity,
-            ResortsXml.ResortState,
-            ResortsXml.ResortCountry,
-            ResortsXml.ResortRegion,
-            ResortsXml.ResortPhone,
-            ResortsXml.UnitID,
-            ResortsXml.MaxOccupancy,
-            ResortsXml.PrivacyOccupancy,
-            //ResortsXml.InventoryID,
-            ResortsXml.CheckInDate,
-            ResortsXml.CheckOutDate,
-            ResortsXml.Price,
-            //ResortsXml.AllInclusive,
-            ResortsXml.Nights,
-            ResortsXml.ImagePath,
-            ResortsXml.Images};
-            Object[] data = lstUnitsAvailable.toArray();
-            
-            
+                ResortsXml.ResortName,
+                ResortsXml.ResortHighLights,
+                ResortsXml.ResortAddress1,
+                ResortsXml.ResortAddress2,
+                ResortsXml.ResortAddress3,
+                ResortsXml.ResortCity,
+                ResortsXml.ResortState,
+                ResortsXml.ResortCountry,
+                ResortsXml.ResortRegion,
+                ResortsXml.ResortPhone,
+                ResortsXml.UnitID,
+                ResortsXml.MaxOccupancy,
+                ResortsXml.PrivacyOccupancy,
+                //ResortsXml.InventoryID,
+                ResortsXml.CheckInDate,
+                ResortsXml.CheckOutDate,
+                ResortsXml.Price,
+                //ResortsXml.AllInclusive,
+                ResortsXml.Nights,
+                ResortsXml.ImagePath,
+                ResortsXml.Images};
+
             DefaultTableModel model = new DefaultTableModel();
             model.setColumnIdentifiers(columnNames);
             for (UnitsAvailable bean : lstUnitsAvailable) {
@@ -225,17 +219,19 @@ public class testPanel extends javax.swing.JPanel {
                     bean.getNights(),
                     bean.getImagePath(),
                     bean.getImages()
-                        
-            };
-            model.addRow(args);
-        }
-        jtblUnitsAvailable.setModel(model);
-            //jtblUnitsAvailable.
-            jtblUnitsAvailable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
-            //JScrollPane scrollPane = new JScrollPane( jtblUnitsAvailable );
+
+                };
+                model.addRow(args);
+            }
+            jtblUnitsAvailable.setModel(model);
+            jtblUnitsAvailable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         }
     }//GEN-LAST:event_jbtnBuscarActionPerformed
 
+    /**
+     * Obtiene las unidades disponibles.
+     * Llamando al webservice que llena la lista.
+     */
     private void getLstUnitsAvailable(){
          if (!(ResortName.isEmpty() && ResortCity.isEmpty() && ResortCountry.isEmpty() && TravelDate1.isEmpty() &&
                 TravelDate2.isEmpty())) {

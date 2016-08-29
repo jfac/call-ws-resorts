@@ -25,7 +25,7 @@ import javax.net.ssl.X509TrustManager;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public class HttpsConection {
     

@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public interface I_ResortCountry extends Serializable {
 

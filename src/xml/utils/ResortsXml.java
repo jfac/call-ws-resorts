@@ -8,7 +8,7 @@ package xml.utils;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public interface ResortsXml {
     public static final String InvType = "InvType";

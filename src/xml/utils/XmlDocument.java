@@ -28,7 +28,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public class XmlDocument {
     private Document document;

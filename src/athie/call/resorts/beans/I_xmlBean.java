@@ -8,7 +8,7 @@ package athie.call.resorts.beans;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public interface I_xmlBean {
 

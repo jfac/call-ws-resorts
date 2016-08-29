@@ -10,7 +10,7 @@ import java.awt.FlowLayout;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public class CallEverybody extends javax.swing.JFrame {
     

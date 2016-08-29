@@ -22,7 +22,8 @@ import xml.utils.XmlNode;
 import xml.utils.ResortsXml;
 
 /**
- *
+ * Clase que realiza el negocio entre el llamado del webservice y el llenado en,
+ * los beans.
  * @author Jose Fermin Athie Campollo
  */
 public class DataSet implements Serializable{
@@ -58,7 +59,7 @@ public class DataSet implements Serializable{
     }
     
     /**
-     * Obtiene las listas de las unidades disponibles.
+     * Metodo publuco que obtiene las listas de las unidades disponibles.
      * @return lista de unidades disponibles.
      */
     public List<UnitsAvailable> getLstUnitsAvailable(){
@@ -105,7 +106,7 @@ public class DataSet implements Serializable{
     
     /**
      * Metodo publico para obtener los estados dependiendo del pais
-     * @return de los estados del pais
+     * @return Lista de estados del pais.
      */
     public List<ResortsState> getLstState(){
         try {
@@ -117,6 +118,9 @@ public class DataSet implements Serializable{
         return lstState;
     }
     
+    /**
+     * Metodo publico para mostrar los valores de la lista actual.
+     */
     public void displayLst() {
         //System.out.println("WeekNumber: " + UnitAvailable);
         System.out.println("ResortXml");
@@ -145,12 +149,13 @@ public class DataSet implements Serializable{
             System.out.println(elBean.getImages());
         }
         System.out.println("X-------------------------------------------------X");
-//        System.out.println("Level B");
-//        for (String rate : employeeRatesLevelB) {
-//            System.out.println("\tRate: " + rate);
 //        }
     }
     
+    /**
+     * Metodo publico para mostrar los datos guardados en el bean.
+     * @param elBean 
+     */
     public void displayBean(UnitsAvailable elBean) {
         //System.out.println("WeekNumber: " + UnitAvailable);
         System.out.println("ResortXml");
@@ -182,7 +187,7 @@ public class DataSet implements Serializable{
     }
     
     /**
-     * 
+     * Metodo publico para mostrar los datos de la lista para los paises.
      */
     public void displayCountryAndStates(){
         System.out.println("Pais");

@@ -19,7 +19,7 @@ import xml.utils.XmlException;
 
 /**
  *
- * @author oem
+ * @author Jose Fermin Athie Campollo
  */
 public class callWsdl implements Serializable{
     
@@ -127,8 +127,8 @@ public class callWsdl implements Serializable{
     
     private String getLogin(){
         StringBuilder sbLogin = new StringBuilder();
-        sbLogin.append("?LoginUser=").append("user").append(c)
-        .append("LoginPassword=").append("password"); 
+        sbLogin.append("?LoginUser=").append("vbassol").append(c)
+        .append("LoginPassword=").append("93Kg6N"); 
         return sbLogin.toString();
     }
     
