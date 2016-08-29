@@ -127,8 +127,8 @@ public class callWsdl implements Serializable{
     
     private String getLogin(){
         StringBuilder sbLogin = new StringBuilder();
-        sbLogin.append("?LoginUser=").append("vbassol").append(c)
-        .append("LoginPassword=").append("93Kg6N"); 
+        sbLogin.append("?LoginUser=").append("usuer").append(c)
+        .append("LoginPassword=").append("password"); 
         return sbLogin.toString();
     }
     
